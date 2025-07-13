@@ -1,0 +1,10 @@
+[Unit]
+Description = milight2zb daemon
+
+[Service]
+ExecStart = /opt/milight2zb/milight2zb.py -u (MQTT username) -p (MQTT password)
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
