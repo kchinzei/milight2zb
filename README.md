@@ -23,10 +23,15 @@ Recent drivers do speak Zigbee MQTT.
 But remote controllers like [B4](https://miboxer.com/product/4-zone-panel-remote-rgbcct) do not.
 Instead they communicate on 2.4 GHz Wifi band using undocumented protocol.
 
-[ESP MiLight hub](https://github.com/sidoh/esp8266_milight_hub/tree/master) by sidoh is a MiLight remote/gateway that can listen MiLight protocol and translate to other format including MQTT.
+[ESP MiLight hub](https://github.com/sidoh/esp8266_milight_hub/) by sidoh is a MiLight remote/gateway that can listen MiLight protocol and translate to other format including MQTT.
 This MQTT is different from that of MiBoxer Zigbee drivers.
 
 `milight2zb` translates MQTT state messages from ESP MiLight hub into MiBoxer Zigbee MQTT so that the other devices can understand it.
+
+<img src="https://miboxer.com/wp-content/uploads/b4-1-300x300.jpg" width="60"> → Wifi  
+→ [ESP MiLight hub](https://github.com/sidoh/esp8266_milight_hub/) → (Own MQTT)  
+→ `milight2zb` → (Zigbee MiBoxer MQTT)  
+→ <img src="https://www.zigbee2mqtt.io/logo.png" width="60">
 
 
 ## Dependency
@@ -37,4 +42,4 @@ This MQTT is different from that of MiBoxer Zigbee drivers.
 
 ## Future to do
 
-- Fork [ESP MiLight hub](https://github.com/sidoh/esp8266_milight_hub/tree/master) so that it directly speaks Zibgee MQTT.
+- Fork [ESP MiLight hub](https://github.com/sidoh/esp8266_milight_hub/) so that it directly speaks Zibgee MQTT.
