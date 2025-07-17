@@ -3,9 +3,9 @@ Description = milight2zigbee daemon
 After=network.target
 
 [Service]
-EnvironmentFile = ./.env
+EnvironmentFile = /opt/milight2zigbee/.env
 ExecStart = /opt/milight2zigbee/milight2zb.py -u ${MQTT_USER} -p ${MQTT_PASS}
-WorkingDirectory=/opt/milight2zigbee
+WorkingDirectory = /opt/milight2zigbee
 Restart=always
 RestartSec=5
 StandardOutput=journal
